@@ -1,27 +1,26 @@
 {
-  "name": "lunchmoney-hpi",
+  "name": "levelshealth-hpi",
   "version": "0.0.1",
-  "main": "bin/lunchmoney.js",
+  "main": "bin/levelshealth.js",
   "dependencies": {
-    "lunchmoney": "^0.1.0",
     "commander": "^7.1.0",
     "dayjs": "^1.10.4",
-    "node-fetch": "^2.6.1"
+    "levels-health-unofficial": "0.0.1"
   },
   "bin": {
-    "lunchmoney": "bin/lunchmoney.js"
+    "levelshealth": "bin/levelshealth.js"
   },
   "scripts": {
-    "build": "pkg bin/lunchmoney.js --out-path pkg/"
+    "build": "pkg bin/levelshealth.js --out-path pkg/"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/takeamos/lunchmoney.git"
+    "url": "git+https://github.com/qnzl-hpi/levelshealth.git"
   },
   "author": "Madeline <maddie@qnzl.co>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/takeamos/lunchmoney/issues"
+    "url": "https://github.com/qnzl-hpi/levelshealth/issues"
   },
-  "homepage": "https://github.com/takeamos/lunchmoney#readme"
+  "homepage": "https://github.com/qnzl-hpi/levelshealth#readme"
 }
