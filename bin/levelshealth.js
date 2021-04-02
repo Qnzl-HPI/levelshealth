@@ -80,7 +80,7 @@ async function dump(args) {
     const zones = await levels.findZones(sevenDaysAgo, tomorrow)
     const streaks = await levels.metabolicFitnessStreaks(sevenDaysAgo, tomorrow)
     const heartRate = await levels.heartRateMetrics(sevenDaysAgo, tomorrow)
-    const metabolicFitness = await levels.heartRateMetrics(sevenDaysAgo, tomorrow)
+    const metabolicFitness = await levels.metabolicFitness(sevenDaysAgo, tomorrow)
 
     const dump = JSON.stringify({
       rawGlucose,
