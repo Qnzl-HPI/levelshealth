@@ -22,11 +22,23 @@ class DAL:
     def raw(self):
         for f in sorted(self.sources):
             with f.open(encoding="utf-8") as fo:
-                yield f, json.load(fo)
+                yield json.load(fo)
 
     def glucoseScores(self) -> Iterator[Res[Json]]:
-      for values in self.raw():
-        print(values)
+      for f in self.raw():
+        for score in f["rawGlucose"]["data"]["glucoseMetrics"]["values"]:
+          yield score
+
+    def zones(self) -> Iterator[Res[Json]]:
+      for f in self.raw():
+        for zone in f["zones"]["data"]["findZones"]:
+          yield zone
+
+    def streaks(self) -> Iterator[Res[Json]]:
+      for f in self.raw():
+        for streak in f["streaks"]["data"]["metabolicFitnessStreaks"]["streaks"]:
+          yield streak
+
 
 if __name__ == '__main__':
     dal_helper.main(DAL=DAL)
